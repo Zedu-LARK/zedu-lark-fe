@@ -68,7 +68,7 @@ export const features = [
   {
     title: "Organized Channels",
     description:
-      "Create subject-based spaces for every cohort. Keep discussions focused, announcements clear, and conversations threaded so nothing gets lost.",
+      "Create dedicated spaces for every subject and cohort, keeping announcements, discussions, and learning resources easy to find.",
     imageSrc: "/images/homepage/features/organised-channels.png",
     imageAlt:
       "Illustration of the Zedu interface showcasing organized channels",
