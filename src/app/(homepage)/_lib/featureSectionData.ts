@@ -84,7 +84,7 @@ export const features = [
   {
     title: "Calls & Collaboration",
     description:
-      "Meet, chat, share documents, and collaborate in real time without switching between different learning tools.",
+      "Meet, chat, share documents, and collaborate in real time without switching between different learning tools",
     imageSrc: "/images/homepage/features/calls-and-collaboration.png",
     imageAlt:
       "Illustration of the Zedu interface showcasing calls and collaboration features",
