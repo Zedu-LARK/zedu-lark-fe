@@ -52,7 +52,7 @@ export const otherFeatures = [
 export const featureMetrics = [
   {
     title: "3x",
-    description: "faster cohort coordination",
+    description: "faster cohort management",
   },
   {
     title: "40%",
