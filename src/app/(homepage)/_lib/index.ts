@@ -1,6 +1,6 @@
 export const whyCardsData = [
   {
-    title: "Built for Education, Not Business",
+    title: "Built Around the Way Learning Happens",
     desc: "Zedu is designed around cohorts, classrooms, and structured learning — with features that support educators instead of corporate workflows",
   },
   {
