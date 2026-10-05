@@ -56,7 +56,7 @@ export const featureMetrics = [
   },
   {
     title: "40%",
-    description: "less admin workload",
+    description: "less time spent on administration",
   },
   {
     title: "24/7",
