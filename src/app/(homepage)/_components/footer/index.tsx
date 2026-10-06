@@ -180,7 +180,7 @@ const Footer = () => {
                 <ZeduRoundedWhiteLogo />
               </Link>
               <h3 className="text-2xl font-semibold leading-none text-white">
-                Get Zedu today
+                Join Zedu today
               </h3>
             </div>
             <form
@@ -204,7 +204,9 @@ const Footer = () => {
                     type="submit"
                     className="relative flex h-full items-center justify-center rounded-[10px] bg-primary-500 px-4 py-2 text-sm font-medium leading-5 transition-all hover:bg-opacity-80"
                   >
-                    <p className={loading ? "opacity-0" : ""}>Subscribe</p>
+                    <p className={loading ? "opacity-0" : ""}>
+                      Join the Community
+                    </p>
                     {loading ? (
                       <Loader2 className="animate-spin absolute" />
                     ) : null}
