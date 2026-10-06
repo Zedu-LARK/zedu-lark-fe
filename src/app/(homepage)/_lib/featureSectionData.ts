@@ -84,7 +84,7 @@ export const features = [
   {
     title: "Calls & Collaboration",
     description:
-      "Work across languages, time zones, and regions with chats, docs, and meetings in one place and Bridge every gap with real-time collaboration tools.",
+      "Meet, chat, share documents, and collaborate in real time without switching between different learning tools.",
     imageSrc: "/images/homepage/features/calls-and-collaboration.png",
     imageAlt:
       "Illustration of the Zedu interface showcasing calls and collaboration features",
