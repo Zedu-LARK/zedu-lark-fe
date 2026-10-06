@@ -204,6 +204,15 @@ export const contributors: Contributor[] = [
     avatarGradient: "from-secondary-500 to-tertiary-400",
   },
   {
+    id: "kestrel-022",
+    name: "Onaopemipo Oyelami",
+    username: "Nopylyn",
+    zeduName: "Nopylyn",
+    background: "Product Management",
+    email: "oyelamionaopemipo@gmail.com",
+    avatarGradient: "from-primary-500 to-blue-400",
+  },
+  {
     id: "kestrel-20",
     name: "Adewumi Oluwasanmi",
     username: "AdewumiOluwasanmi",
