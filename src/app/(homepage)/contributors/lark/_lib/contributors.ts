@@ -72,7 +72,7 @@ export const larkContributors: Contributor[] = [
   { name: "Oluchi Oraekwe", email: "ol***@gmail.com", role: "Member" },
   { name: "Olurounbi Halliday", email: "ro***@gmail.com", role: "Member" },
   { name: "Oluwateniayomi Adeniyi.", email: "te***@gmail.com", role: "Member" },
-  { name: "Onyeka Prince", email: "on***@gmail.com", role: "Member" },
+  { name: "Onyeka Prince", email: "on***@gmail.com", role: "Contributor" },
   { name: "Osajimere Atalor", email: "os***@gmail.com", role: "Member" },
   { name: "Paulinus Obiahu", email: "po***@gmail.com", role: "Member" },
   { name: "Peter Abah", email: "pe***@gmail.com", role: "Member" },
