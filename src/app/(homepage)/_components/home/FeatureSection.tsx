@@ -85,7 +85,7 @@ export const FeatureSection = () => {
           <div className="flex w-full flex-col gap-8 md:flex-row md:items-center md:justify-between">
             <div className="flex w-full max-w-2xl flex-col gap-3 text-left md:w-7/12">
               <h2 className="text-2xl font-bold leading-tight text-neutral-900 sm:text-3xl lg:text-4xl">
-                All Your Learning Tools.
+                All Your Learning Tools.{" "}
                 <span className="block text-primary-500">
                   One Simple Subscription
                 </span>
