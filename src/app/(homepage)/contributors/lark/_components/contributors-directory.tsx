@@ -66,7 +66,7 @@ export function ContributorsDirectory({
             type="search"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
-            placeholder="Search contributors"
+            placeholder="Search our  contributors"
             aria-label="Search contributors by name"
             className="rounded-lg border-neutral-200 bg-white pl-9"
           />
