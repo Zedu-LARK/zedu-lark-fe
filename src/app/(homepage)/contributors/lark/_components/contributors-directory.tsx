@@ -7,7 +7,8 @@ import type { Contributor } from "../_lib/contributors";
 import { TeamList } from "./team-list";
 
 // Lowercase and strip accents so "oreoluwa" matches "Orèoluwa".
-function normalize(text: string) {
+function normalize(text: string)
+{
   return text
     .normalize("NFD")
     .replace(/\p{Diacritic}/gu, "")
@@ -18,14 +19,17 @@ export function ContributorsDirectory({
   contributors,
 }: {
   contributors: Contributor[];
-}) {
+})
+{
   const [query, setQuery] = useState("");
 
-  const filtered = useMemo(() => {
+  const filtered = useMemo(() =>
+  {
     const words = normalize(query).split(/\s+/).filter(Boolean);
     if (words.length === 0) return contributors;
     // Every typed word must appear somewhere in the name, in any order.
-    return contributors.filter((contributor) => {
+    return contributors.filter((contributor) =>
+    {
       const name = normalize(contributor.name);
       return words.every((word) => name.includes(word));
     });
@@ -38,7 +42,7 @@ export function ContributorsDirectory({
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div className="flex flex-col gap-2">
           <h1 className="text-2xl font-semibold text-neutral-900 sm:text-3xl md:text-4xl">
-            Our Contributors
+            Meet Our Contributors
           </h1>
           <p className="text-sm text-neutral-600 sm:text-base">
             The LARK team members who have contributed to building Zedu.
