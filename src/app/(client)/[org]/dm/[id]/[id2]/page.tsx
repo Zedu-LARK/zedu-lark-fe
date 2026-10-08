@@ -178,7 +178,7 @@ const DmPage = () => {
         {/* Profile Sidebar */}
         {state?.showProfile && isSmUp && (
           <div className="w-[408px] h-full bg-white border-l border-[#E6EAEF] shadow-[-3px_0px_27px_0px_#DFDFDF]">
-            <ProfileSidebar user={participant} />
+            <ProfileSidebar user={activeParticipant} />
           </div>
         )}
 
