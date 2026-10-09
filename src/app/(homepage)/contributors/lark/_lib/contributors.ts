@@ -86,6 +86,6 @@ export const larkContributors: Contributor[] = [
   },
   { name: "Ugonwa Ohagwasi", email: "ug***@gmail.com", role: "Member" },
   { name: "Usman Abdullahi Ubale", email: "us***@gmail.com", role: "Member" },
-  { name: "Yusuf Muhammad Musa", email: "yu***@gmail.com", role: "Member" },
+  { name: "Yusuf Muhammad Musa", email: "yu***@gmail.com", role: "Contributor" },
   { name: "Zainab Rasaki", email: "ra***@gmail.com", role: "Member" },
 ];
