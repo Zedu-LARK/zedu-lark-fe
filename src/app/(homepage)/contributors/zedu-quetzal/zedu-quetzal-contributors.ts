@@ -2,8 +2,8 @@ import type { Contributor } from "~/data/zedu-osprey-contributors";
 
 export const zeduQuetzalContributors: Contributor[] = [
   { name: "Omolara", username: "melancholia" },
-  { name: "Tobiloba Adigun", username: "Tasiwewe" },
-  { name: "Taiwo Tolani", username: "conversely" },
+  { name: "Tobiloba Similoluwa", username: "Tasiwewe" },
+  { name: "Taiwo Omotola", username: "conversely" },
   { name: "Isaac Josiah", username: "isaac josiah" },
   { name: "Bigtiffs", username: "Bigtiffs" },
   { name: "Uchechukwu Samuel", username: "usamuelchukwu" },
@@ -19,7 +19,7 @@ export const zeduQuetzalContributors: Contributor[] = [
   { name: "Increase Akinwole", username: "increaseakinwole" },
   { name: "Douye Frank", username: "douye frank" },
   { name: "Canon", username: "Canon" },
-  { name: "Cyrus", username: "Cyrus" },
+  { name: "Oluwayoyinsola Cecil", username: "Cyrus" },
   { name: "Hauwa Ismail Ahmad", username: "Hauwa Ismail" },
   { name: "Okorie winner", username: "Okorie winner" },
   { name: "Paul Folorunsho Folorunsho", username: "Paul Folorunsho" },
@@ -57,4 +57,5 @@ export const zeduQuetzalContributors: Contributor[] = [
   { name: "Annie", username: "anniedevkiller" },
   { name: "Michael Ndianaobong Churchill", username: "D-Gen" },
   { name: "Bayode Manuel", username: "Senior Man" },
+  { name: "Weenah", username: "weenah-hub" },
 ];
