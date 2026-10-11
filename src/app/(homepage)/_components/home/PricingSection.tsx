@@ -26,12 +26,11 @@ export const PricingSection = ({
         }`}
       >
         <h1 className=" text-2xl font-semibold leading-tight text-neutral-900 sm:text-3xl md:text-4xl text-center">
-          Simple, Flexible Pricing for Education
+          Start free. Scale when your cohort does.
         </h1>
         {showSubtitle ? (
           <p className="max-w-3xl text-sm text-neutral-700 sm:text-base">
-            Flexible plans for educators, bootcamps, and institutions building
-            structured learning environments with collaboration and AI support.
+            Live classes, cohorts and AI study help in one workspace.
           </p>
         ) : null}
 
