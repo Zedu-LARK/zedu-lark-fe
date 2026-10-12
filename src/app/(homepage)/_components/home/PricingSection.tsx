@@ -30,7 +30,7 @@ export const PricingSection = ({
         </h1>
         {showSubtitle ? (
           <p className="max-w-3xl text-sm text-neutral-700 sm:text-base">
-            Live classes, cohorts and AI study help in one workspace.
+            Free for small classes. Upgrade for live classes and AI study assistants.
           </p>
         ) : null}
 
