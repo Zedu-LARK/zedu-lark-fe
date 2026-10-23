@@ -8,6 +8,7 @@ import { Button } from "~/components/ui/button";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Toaster } from "~/components/ui/toaster";
 import { PostRequest } from "~/utils/request";
+import { safeRedirect } from "~/utils/safe-redirect";
 import Loading from "~/components/ui/loading";
 import { LoginWebhookRequest } from "~/utils/webhook-request";
 import { useGoogleLogin } from "@react-oauth/google";
@@ -53,8 +54,9 @@ function Login() {
         if (orgSlug) {
           localStorage.setItem("orgSlug", orgSlug);
         }
-        if (redirectUrl) {
-          router.push(redirectUrl);
+        const target = safeRedirect(redirectUrl, "");
+        if (target) {
+          router.push(target);
         } else {
           if (user?.is_onboarded) {
             router.push(`/${orgSlug}`);
@@ -133,11 +135,12 @@ function Login() {
           localStorage.setItem("orgSlug", orgSlug);
         }
 
-        if (redirectUrl) {
+        const target = safeRedirect(redirectUrl, "");
+        if (target) {
           // If there's a coworkerId, append it to the redirect URL
           const finalRedirectUrl = coworkerId
-            ? `${redirectUrl}?coworkerId=${coworkerId}`
-            : redirectUrl;
+            ? `${target}?coworkerId=${encodeURIComponent(coworkerId)}`
+            : target;
           setTimeout(() => {
             router.push(finalRedirectUrl);
           }, 100);
@@ -216,8 +219,9 @@ function Login() {
             localStorage.setItem("orgSlug", orgSlug);
           }
 
-          if (redirectUrl) {
-            router.push(redirectUrl);
+          const target = safeRedirect(redirectUrl, "");
+          if (target) {
+            router.push(target);
           } else {
             if (user?.is_onboarded) {
               router.push(`/${orgSlug}`);
