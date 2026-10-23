@@ -11,6 +11,8 @@ import {
 import { PutRequest } from "~/utils/new-request";
 import { showError, showSuccess } from "~/components/toast/sonner";
 import Loading from "~/components/ui/loading";
+const MIN_PASSWORD_LENGTH = 7;
+
 const UpdatePassword = () => {
   const [open, setOpen] = useState(false);
   const [buttonLoading, setButtonLoading] = useState(false);
@@ -21,11 +23,23 @@ const UpdatePassword = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
+  const newPasswordTooShort =
+    newPassword.length > 0 && newPassword.length < MIN_PASSWORD_LENGTH;
+
   const canSubmit =
-    oldPassword !== "" && newPassword !== "" && confirmPassword !== "";
+    oldPassword !== "" &&
+    newPassword.length >= MIN_PASSWORD_LENGTH &&
+    confirmPassword !== "";
 
   const handleSaveNewPassword = async (e: FormEvent) => {
     e.preventDefault();
+
+    // The API rejects anything shorter than 7 with a generic "Validation
+    // failed"; catch it here so the user knows the actual rule.
+    if (newPassword.length < MIN_PASSWORD_LENGTH) {
+      showError(`Password must be at least ${MIN_PASSWORD_LENGTH} characters`);
+      return;
+    }
 
     if (newPassword !== confirmPassword) {
       showError("Password does not match");
@@ -124,6 +138,11 @@ const UpdatePassword = () => {
                   {showNewPassword ? <EyeOff size={18} /> : <Eye size={18} />}
                 </button>
               </div>
+              {newPasswordTooShort && (
+                <p className="mt-1 text-xs text-red-600">
+                  Password must be at least {MIN_PASSWORD_LENGTH} characters.
+                </p>
+              )}
             </div>
 
             <div className="mb-4">
