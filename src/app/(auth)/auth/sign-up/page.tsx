@@ -8,6 +8,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { Checkbox } from "~/components/ui/checkbox";
 import Loading from "~/components/ui/loading";
 import { PostRequest } from "~/utils/request";
+import { safeRedirect } from "~/utils/safe-redirect";
 import { useGoogleLogin } from "@react-oauth/google";
 import { RegisterWebhookRequest } from "~/utils/webhook-request";
 import { Separator } from "~/components/ui/separator";
@@ -50,8 +51,9 @@ function SignUp() {
         if (orgSlug) {
           localStorage.setItem("orgSlug", orgSlug);
         }
-        if (redirectUrl) {
-          router.push(redirectUrl);
+        const target = safeRedirect(redirectUrl, "");
+        if (target) {
+          router.push(target);
         } else {
           if (user?.is_onboarded) {
             router.push(`/${orgSlug}`);
@@ -183,9 +185,10 @@ function SignUp() {
           localStorage.setItem("orgSlug", orgSlug);
         }
 
-        if (redirectUrl) {
+        const target = safeRedirect(redirectUrl, "");
+        if (target) {
           setTimeout(() => {
-            router.push(redirectUrl);
+            router.push(target);
           }, 100);
         } else {
           setTimeout(() => {
@@ -241,13 +244,14 @@ function SignUp() {
             localStorage.setItem("orgSlug", orgSlug);
           }
 
-          if (redirectUrl) {
-            router.push(redirectUrl);
+          const target = safeRedirect(redirectUrl, "");
+          if (target) {
+            router.push(target);
           } else {
             if (user?.is_onboarded) {
               router.push(`/${orgSlug}`);
             } else {
-              router.push(`${orgSlug}/welcome`);
+              router.push(`/${orgSlug}/welcome`);
             }
           }
 
